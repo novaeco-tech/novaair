@@ -33,8 +33,8 @@ graph TD
     UI -->|REST| API[NovaAir API]
     
     subgraph "The Sensing Layer"
-        API -->|Fetch Live Data| Worker[Worker-AirQuality]
-        Worker -->|Ingest| Infra[NovaInfra (Sensors/Drones)]
+        API -->|Fetch Live Data| Worker["Worker-AirQuality"]
+        Worker -->|Ingest| Infra["NovaInfra (Sensors/Drones)"]
         Infra -->|MQTT| DAC[Direct Air Capture Plant]
     end
 
